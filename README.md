@@ -3,6 +3,10 @@
 This is my implementation from scratch of the paper Ornstein Uhlenbeck Adaptation as a Mechanism for Learning 
 In Brains and Machines (Jesus Garcia Fernandez et al, Radboud University, Netherlands).
 
+Link here:
+
+https://arxiv.org/abs/2410.13563
+
 In this implementation, we model the usage of the OUA mechanism to train a multiparameter model to approximate 
 simple datasets. 
 
@@ -22,6 +26,8 @@ updates to model weights in the direction of some mean parameter value, "mu".
 Comparing equation (5) with the general form for the Stochastic Differential Equation from Langevin Dynamics suggests 
 that the ideal parameter distribution is a multivariate Gaussian with mean "mu", and a standard deviation given by 
 1 / lambda_.
+
+dθ(t)=λ(μ(t)−θ(t))dt+ΣdW(t)
 
 The mean in this equation is calculated by solving an Ordinary Differential Equation and is a direct function of a solution 
 to yet another ODE, the Reward Prediction Error (RPE) equation. 
